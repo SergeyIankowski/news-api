@@ -1,0 +1,55 @@
+:root {
+    --button-color: #F4A460;
+}
+@keyframes blink {
+    0%{
+        box-shadow: none;
+    }
+    50%{
+        box-shadow: 0 0 10px 0 var(--button-color) inset, 0 0 20px 2px var(--button-color);
+    }
+    100%{
+        box-shadow: none;
+    }
+}
+body {
+    color: #fff;
+    background: #17181c;
+    font-family: sans-serif;
+}
+
+header {
+    padding: 10px 30px;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--button-color);
+    animation-name: blink;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    font-family: 'Neondraw', cursive;
+}
+
+footer {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer .copyright {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+footer .copyright a {
+    color: #444;
+}
+footer .copyright a:hover {
+    color: #555;
+}
+footer .copyright:before {
+    content: '©';
+}
